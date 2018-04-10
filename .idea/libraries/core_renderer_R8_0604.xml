@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="core-renderer-R8-0604">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/itext5/core-renderer-R8-0604.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/itext5/iText-2.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/itext5/itext-pdfa-5.5.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/itext5/itext-xtra-5.5.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/itext5/itextpdf-5.5.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/itext5/xmlworker-5.5.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

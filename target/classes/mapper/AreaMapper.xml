@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weixin.dao.AreaDao">
+    <sql id="commonSql">
+        area_name,priority,create_time,modify_time
+    </sql>
+    <select id="findAreaList" resultType="com.weixin.entity.Area">
+      SELECT area_id,
+       <include refid="commonSql"></include>
+        FROM t_area
+        ORDER BY priority DESC
+    </select>
+    <select id="findAreaById" resultType="com.weixin.entity.Area">
+        SELECT area_id,
+        <include refid="commonSql"></include>
+        FROM t_area
+        WHERE area_id=#{areaId}
+    </select>
+    <insert id="insertArea" useGeneratedKeys="true" keyProperty="areaId"
+            keyColumn="area_id" parameterType="com.weixin.entity.Area">
+        INSERT INTO t_area(
+        <include refid="commonSql"></include>
+        ) VALUES (#{areaName},#{priority},#{createTime},#{modifyTime})
+    </insert>
+    <update id="updateArea"  parameterType="com.weixin.entity.Area">
+        UPDATE  t_area
+        <set>
+            <if test="areaName!=null">area_name=#{areaName},</if>
+            <if test="priority!=null">priority=#{priority},</if>
+            <if test="createTime!=null">create_time=#{createTime},</if>
+            <if test="modifyTime!=null">modify_time=#{modifyTime},</if>
+        </set>
+        WHERE area_id=#{areaId}
+    </update>
+    <delete id="deleteArea" parameterType="java.lang.Integer">
+        DELETE FROM t_area WHERE area_id=#{areaId}
+    </delete>
+
+</mapper>
