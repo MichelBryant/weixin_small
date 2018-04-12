@@ -1,0 +1,21 @@
+<!--pages/operation/operation.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">区域名称：</view>
+    <input type='text' name="areaName" placeholder="请输入区域名称" value='{{area.areaName}}'/>
+  </view>
+   <view class="section">
+    <view class="section__title">优 先 级：</view>
+    <input type='number' maxlength='1' name="priority" 
+    placeholder="请输入优先级" value='{{area.priority}}'/>
+  </view>
+  <view class="btn-area" style='flex-direction:row;'>
+  <view style='margin-left:90px;'>
+      <button  formType="submit">提交</button>
+  </view>
+  <view style='margin-left:90px;'>
+    <button  formType="reset">重置</button>
+  </view>
+  </view>
+</form>
+<map></map>

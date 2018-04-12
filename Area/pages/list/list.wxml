@@ -1,0 +1,52 @@
+<!--pages/list/list.wxml-->
+<view class='tab1' style='flex-direction:row;'>
+<text class='column'>ID</text>
+<text class='column'>区域名</text>
+<text class='column'>优先级</text>
+<view class="tab1" style='margin-left:12px;'>
+<text class='link-column'>操  作</text>
+</view>
+</view>
+<block wx:for="{{list}}">
+<view class='tab1' style='flex-direction:row;width:100%;'>
+<text class='column'>{{item.areaId}}</text>
+<text class='column'>{{item.areaName}}</text>
+<text class='column'>{{item.priority}}</text>
+<view class="tab1" style='margin-left:12px;'>
+<navigator class="link" url="../operation/operation?areaId={{item.areaId}}">
+编辑
+</navigator>
+<text class='link' bindtap='deleteArea' data-areaid="{{item.areaId}}"
+data-areaname='{{item.areaName}}' data-index='{{index}}'>删除</text>
+</view>
+</view>
+</block>
+<button type='primary' bindtap='addArea' style='background-color:#1AAD19;'>新增区域信息</button>
+
+<scroll-view scroll-x="true">  
+<view class="uploadWrap" scroll-x="true">  
+  <view class="upload_Item">  
+    <image class="upload_Item_img"  src="../../image/timg.jpg"></image>  
+  </view>  
+  <view class="upload_Item">  
+    <image class="upload_Item_img"  src="../../image/timg.jpg"></image>  
+  </view>  
+  <view class="upload_Item">  
+    <image class="upload_Item_img"  src="../../image/timg.jpg"></image>  
+  </view>  
+  <view class="upload_Item">  
+    <image class="upload_Item_img"  src="../../image/timg.jpg"></image>  
+  </view>  
+  <view class="upload_Item">  
+    <image class="upload_Item_img"  src="../../image/timg.jpg"></image>  
+  </view>  
+  <view class="upload_Item">  
+    <image class="upload_Item_img"  src="../../image/timg.jpg"></image>  
+  </view>  
+  <view class="upload_Item">  
+    <image class="upload_Item_img"  src="../../image/timg.jpg"></image>  
+  </view>  
+  
+</view>  
+</scroll-view> 
+

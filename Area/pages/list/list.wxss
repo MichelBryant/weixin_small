@@ -1,0 +1,20 @@
+/* pages/list/list.wxss */
+.container{
+  padding-top: 0px;
+}
+view{
+  display: inline-flex;
+}
+.column{
+margin-left: 60px;
+}
+.link{
+ margin-left: 5px; 
+ color:cornflowerblue;
+}
+.navigator-hover {
+    color:blueviolet;
+}
+.navigator-visited {
+    color:blueviolet;
+}

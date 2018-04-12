@@ -1,0 +1,13 @@
+/* pages/operation/operation.wxss */
+view{
+  display: inline-flex;
+  margin-top: 20px;
+}
+input{
+  border-radius: 5px;
+  height:50px;
+  border: solid gray 1px;
+}
+button{
+  background-color:#1AAD19;
+}
